@@ -52,6 +52,5 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         Intent i = new Intent(this,ImageActivity.class);
         // get path for current image
         String path = ImagePath.get(position);
-        i.putExtra("path",path);
     }
 }

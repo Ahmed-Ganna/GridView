@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -21,6 +22,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("dfsdg", "srgs");
         setContentView(R.layout.activity_main);
         gridView = (GridView) findViewById(R.id.gridview);
         gridView.setOnItemClickListener(this);
@@ -51,6 +53,5 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         // get path for current image
         String path = ImagePath.get(position);
         i.putExtra("path",path);
-        startActivity(i);
     }
 }
